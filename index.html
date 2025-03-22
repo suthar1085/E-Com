@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="yellow">
+        <nav
+            class="navbar navbar-expand-lg container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+            <ul class="leftnav d-none d-md-flex justify-content-start gap-3 w-25 fw-bold">
+                <li>
+                    <a href="">Shop</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/icon-search.static.svg?v=50573694897280823451741296058"
+                        alt="Search">
+                </li>
+            </ul>
+            <div class="centernav d-flex justify-content-center w-50">
+                <a href="/" class="logo-link">
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/logo-full.static.svg?v=89107020529489074251741296058"
+                        class="logo" alt="The Figma Store">
+                </a>
+            </div>
+            <div class="rightnav d-none d-md-flex justify-content-end gap-3 w-25 fw-bold">
+                <select class="fw-bold" name="" id="">
+                    <option value="United state">United State</option>
+                </select>
+                <a href="">Cart 0</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero pb-5">
+            <div class="owl-carousel owl-theme yellow">
+                <div class="item">
+                    <img src="img/1.png" alt="Image 1">
+                </div>
+                <div class="item">                   
+                    <img src="img/2.png" alt="Image 2">
+                </div>
+                <div class="item">
+                    <img src="img/3.png" alt="Image 3">
+                </div>
+                <div class="item">
+                    <img src="img/4.png" alt="Image 4">
+                </div>
+            </div>
+        </section>
+        <section class="symbol-text py-5">
+            <div class="container">
+                <h2 class="blurb"
+                    :class="productFilter == 'layer' ? 'filter-active' : '' || productFilter == 'component' ? 'filter-active' : ''">
+
+                    <span class="word">Figma's</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-burst.static.svg?v=34745811441670751621741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">Collection</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-hourglass.static.svg?v=133626873782927219541741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">Of</span>
+
+                    <br>
+
+                    <span class="word-layers" :class="productFilter == 'component' ? 'is-faded' : ''"
+                        @click="productFilter = productFilter == 'layer' ? 'all' : 'layer'; window.scrollReveal.delegate()">Layers</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-zag.static.svg?v=102718930007740203771741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">And</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-dots.static.svg?v=39142388321885661271741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word-components"
+                        @click="productFilter = productFilter == 'component' ? 'all' : 'component'; window.scrollReveal.delegate()"
+                        :class="productFilter == 'layer' ? 'is-faded' : ''">Components</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-sun.static.svg?v=163357932534391307201741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">For you</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-comet.static.svg?v=16892712658856357451741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">and</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-snake.static.svg?v=34100567131936571961741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">your</span>
+
+                    <img src="//store.figma.com/cdn/shop/t/37/assets/word-symbol-tri.static.svg?v=32742515804419710851741296058"
+                        aria-hidden="true" class="word-icon">
+
+                    <span class="word">friends</span>
+                </h2>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="backg p-4 d-flex flex-column justify-content-center align-items-start gap-3">
+                <h2>FIGMA X WORK <br>
+                    LOUDER</h2>
+                <h4>
+                    Meet the limited edition <br>
+                    Figma Creator Micro <br>
+                    Kayboard
+                </h4>
+                <button>
+                    PREORDER
+                </button>
+            </div>
+        </section>
+        <section class="Category py-5">
+            <div class="container">
+                <div class="grid" style="--bs-columns: 3; --bs-gap: 2rem;">
+                    <div class="category-button g-col-3 g-col-md-1"
+                        onclick="window.location.href='category.html?category=womens'">
+                        <div class="imgs"><img class="image"
+                                src="//store.figma.com/cdn/shop/files/20240619_Figma_Store_4914_600x.jpg?v=1719341698"
+                                height="auto" width="100%" alt="Chunky Glyph Tee">
+                        </div>
+                        <div>
+                            <h5>Category</h5>
+                            <h4>Womens</h4>
+                        </div>
+                    </div>
+                    <div class="category-button g-col-3 g-col-md-1"
+                        onclick="window.location.href='category.html?category=accessories'">
+                        <div class="imgs"><img class="image"
+                                src="//store.figma.com/cdn/shop/products/figma-store_washi-tape-tan_01_600x.jpg?v=1670520306"
+                                height="auto" width="100%" alt="Pick of the bunch washi tape"></div>
+                        <div>
+                            <h5>Category</h5>
+                            <h4>Accessories</h4>
+                        </div>
+                    </div>
+                    <div class="category-button g-col-3 g-col-md-1"
+                        onclick="window.location.href='category.html?category=mens'">
+                        <div class="imgs"><img class="image"
+                                src="//store.figma.com/cdn/shop/files/20240619_Figma_Store_5201_b938b1fb-eeec-426b-9d55-926a2848f98a_600x.jpg?v=1719509034"
+                                height="auto" width="100%" alt="Chunky Glyph Longsleeve"></div>
+                        <div>
+                            <h5>Category</h5>
+                            <h4>Mens</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pb-1">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-3">
+                    <svg class="svg-logo current" width="100%" height="auto" viewBox="0 0 250 273" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M193.125 0H56.875V86.25H8.14125e-06L0 272.5L56.875 272.5H193.125L250 272.5L250 86.25H193.125V0Z"
+                            fill="#0FA958"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M103.809 63.3749H99.5594V44.1216H91.6162V40.4932H111.883V44.1216H103.809V63.3749ZM119.422 63.3749H115.173V40.4932H119.422V49.7439H130.144V40.4932H134.394V63.3749H130.144V53.405H119.422V63.3749ZM140.327 63.3749H157.129V59.7465H144.577V53.3723H153.991V49.7766H144.577V44.1216H157.129V40.4932H140.327V63.3749ZM112.296 143.865C116.97 143.865 118.997 141.381 119.879 139.812V143.375H123.802V131.803H111.936V135.464H119.552C119.324 137.72 117.264 140.237 113.146 140.237C109.092 140.237 105.921 137.262 105.921 131.967C105.921 126.639 109.256 123.664 113.276 123.664C116.97 123.664 118.833 125.789 119.781 128.502L123.9 126.933C122.691 123.304 119.356 120.003 113.309 120.003C106.673 120.003 101.476 125.102 101.476 131.999C101.476 139.485 106.216 143.865 112.296 143.865ZM76.1362 143.375H71.8867V120.493H89.048V124.122H76.1362V130.627H86.4003V134.288H76.1362V143.375ZM97.0451 143.375H92.7957V120.493H97.0451V143.375ZM132.989 143.375H128.74V120.493H135.702L140.083 132.457C141.161 135.497 141.554 136.51 141.815 137.099C142.077 136.445 142.436 135.497 143.548 132.457L147.928 120.493H154.662V143.375H150.412V132.915V124.35L143.45 143.375H139.919L132.989 124.35V132.915V143.375ZM176.028 143.375H180.735L172.203 120.493H166.548L157.886 143.375H162.462L164.456 137.72H174.099L176.028 143.375ZM165.731 134.092L167.692 128.567C167.958 127.8 168.182 127.154 168.374 126.601C168.819 125.319 169.088 124.542 169.294 123.926L170.928 128.535L172.824 134.092H165.731ZM79.7355 238.24C85.9463 238.24 88.8555 235.102 88.8555 231.18C88.8555 227.224 85.8155 225.034 81.468 224.315L78.4934 223.792C76.3686 223.4 75.2572 222.517 75.2572 220.948C75.2572 219.314 76.4994 217.908 79.3759 217.908C82.5794 217.908 84.0177 219.837 84.6387 221.7L88.594 220.164C87.7114 217.385 84.9983 214.378 79.5067 214.378C74.0151 214.378 70.9097 217.451 70.9097 221.144C70.9097 225.23 73.5575 227.126 77.6108 227.813L80.52 228.303C83.2985 228.793 84.4426 229.839 84.4426 231.474C84.4426 233.337 83.0043 234.71 79.8009 234.71C76.2052 234.71 74.4073 232.389 73.7863 229.97L69.7656 231.507C70.7136 235.168 73.8843 238.24 79.7355 238.24ZM98.0909 237.75H102.34V218.497H110.414V214.868H90.1477V218.497H98.0909V237.75ZM135.169 226.342C135.169 233.304 130.494 238.24 123.27 238.24C116.046 238.24 111.372 233.304 111.372 226.342C111.372 219.412 116.079 214.378 123.27 214.378C130.429 214.378 135.169 219.412 135.169 226.342ZM115.817 226.342C115.817 231.082 118.596 234.612 123.27 234.612C127.944 234.612 130.69 231.082 130.69 226.342C130.69 221.537 127.944 218.006 123.27 218.006C118.596 218.006 115.817 221.537 115.817 226.342ZM139.625 237.75H143.875V228.728H148.255C151.197 228.728 152.537 229.741 152.962 232.52L153.746 237.75H158.323L157.277 232.16C156.721 229.022 155.152 227.617 152.243 227.257C155.119 226.734 157.93 224.838 157.93 220.981C157.93 217.418 155.119 214.868 150.281 214.868H139.625V237.75ZM143.875 225.165V218.497H149.53C151.785 218.497 153.485 219.543 153.485 221.831C153.485 224.119 151.785 225.165 149.53 225.165H143.875ZM179.666 237.75H162.864V214.868H179.666V218.497H167.114V224.152H176.528V227.747H167.114V234.122H179.666V237.75Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+                <div class="col-8 col-md-7 d-flex flex-column justify-content-between">
+                    <div class="row w-100">
+                        <div class="col-6">
+                            <h3>OBJECTS <br>
+                                THAT INSPIRE.</h3>
+                        </div>
+                        <div class="col-6">
+                            <ul class="quick d-flex flex-column gap-2">
+                                <li>Privacy Policy</li>
+                                <li>Term of Sale</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <ul class="p-0 m-0 d-flex flex-wrap gap-4 fw-semibold">
+                            <li>figma</li>
+                            <li>twitter</li>
+                            <li>instagram</li>
+                            <li>youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1 col-md-2 d-flex justify-content-end align-items-end">
+                    <button class="up rounded-circle border-0 bg-black text-white m-2" title="Go To Top"
+                        onclick="scrollToTop()">🡩</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-ticker h3">
+            <div class="tape">
+
+                <span class="word">Figma's</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="18" viewBox="0 0 23 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">marvelously</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="24" viewBox="0 0 23 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.687" cy="12" r="11.1499" fill="white"></circle>
+                </svg>
+
+                <span class="word">considered</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.199219 0.637695H9.25853C14.2619 0.637695 18.3179 4.69369 18.3179 9.69701C18.3179 14.7003 14.2619 18.7563 9.25853 18.7563C4.25521 18.7563 0.199219 14.7003 0.199219 9.69701V0.637695Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">collection</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="20" viewBox="0 0 23 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.286133 0.243652H11.4361H22.586C15.6173 5.66375 15.6173 14.3359 22.586 19.756H11.4361H0.286133C7.25484 14.3359 7.25484 5.66375 0.286133 0.243652Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">of</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="24" viewBox="0 0 23 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="11.3115" y="0.850098" width="15.7684" height="15.7684"
+                        transform="rotate(45 11.3115 0.850098)" fill="white"></rect>
+                </svg>
+
+                <span class="word">objects</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="26" height="24" viewBox="0 0 26 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="13.1858" cy="17.2961" rx="5.85371" ry="12.5437" transform="rotate(90 13.1858 17.2961)"
+                        fill="white"></ellipse>
+                    <ellipse cx="13.1858" cy="6.70381" rx="5.85371" ry="12.5437" transform="rotate(90 13.1858 6.70381)"
+                        fill="white"></ellipse>
+                </svg>
+
+                <span class="word">for</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.818 0.850098H0.305664L3.86452 7.8188L0.305664 12L3.86452 16.1812L0.305664 23.15H19.818L16.1365 16.1812L19.818 12L16.1365 7.8188L19.818 0.850098Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">our</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.180664" y="0.243652" width="19.5124" height="19.5124" rx="5.57496" fill="white"></rect>
+                </svg>
+
+                <span class="word">time</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="26" height="18" viewBox="0 0 26 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.393555 17.3626V9.00014C0.393555 3.42518 3.18104 0.637695 7.36226 0.637695C12.9372 0.637697 15.7247 6.21266 19.9059 6.21266C22.6934 6.21266 24.0872 4.81892 24.0872 0.637695H25.4809V9.00014C25.4809 14.5751 22.6934 17.3626 18.5122 17.3626C12.9372 17.3626 10.1497 11.7876 5.96852 11.7876C3.45397 11.7876 1.7873 13.3207 1.7873 17.3626H0.393555Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">on</span>
+                <!-- Variable: index -->
+
+
+                <svg class="snippet--ticker-shape" width="23" height="18" viewBox="0 0 23 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z"
+                        fill="white"></path>
+                </svg>
+
+            </div>
+            <div class="tape">
+
+                <span class="word">Figma's</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="18" viewBox="0 0 23 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">marvelously</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="24" viewBox="0 0 23 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.687" cy="12" r="11.1499" fill="white"></circle>
+                </svg>
+
+                <span class="word">considered</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.199219 0.637695H9.25853C14.2619 0.637695 18.3179 4.69369 18.3179 9.69701C18.3179 14.7003 14.2619 18.7563 9.25853 18.7563C4.25521 18.7563 0.199219 14.7003 0.199219 9.69701V0.637695Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">collection</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="20" viewBox="0 0 23 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.286133 0.243652H11.4361H22.586C15.6173 5.66375 15.6173 14.3359 22.586 19.756H11.4361H0.286133C7.25484 14.3359 7.25484 5.66375 0.286133 0.243652Z"
+                        fill="white"></path>
+                </svg>
+
+                <span class="word">of</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="23" height="24" viewBox="0 0 23 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="11.3115" y="0.850098" width="15.7684" height="15.7684"
+                        transform="rotate(45 11.3115 0.850098)" fill="white"></rect>
+                </svg>
+
+                <span class="word">objects</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="26" height="24" viewBox="0 0 26 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="13.1858" cy="17.2961" rx="5.85371" ry="12.5437" transform="rotate(90 13.1858 17.2961)"
+                        fill="white"></ellipse>
+                    <ellipse cx="13.1858" cy="6.70381" rx="5.85371" ry="12.5437" transform="rotate(90 13.1858 6.70381)"
+                        fill="white"></ellipse>
+                </svg>
+
+                <span class="word">for</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.818 0.850098H0.305664L3.86452 7.8188L0.305664 12L3.86452 16.1812L0.305664 23.15H19.818L16.1365 16.1812L19.818 12L16.1365 7.8188L19.818 0.850098Z"
+                        fill="white"></path>
+                </svg>
+
+
+                <span class="word">our</span>
+                <!-- Variable: index -->
+
+                <svg class="snippet--ticker-shape" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.180664" y="0.243652" width="19.5124" height="19.5124" rx="5.57496" fill="white"></rect>
+                </svg>
+
+                <span class="word">time</span>
+                <!-- Variable: index -->
+
+
+                <svg class="snippet--ticker-shape" width="26" height="18" viewBox="0 0 26 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.393555 17.3626V9.00014C0.393555 3.42518 3.18104 0.637695 7.36226 0.637695C12.9372 0.637697 15.7247 6.21266 19.9059 6.21266C22.6934 6.21266 24.0872 4.81892 24.0872 0.637695H25.4809V9.00014C25.4809 14.5751 22.6934 17.3626 18.5122 17.3626C12.9372 17.3626 10.1497 11.7876 5.96852 11.7876C3.45397 11.7876 1.7873 13.3207 1.7873 17.3626H0.393555Z"
+                        fill="white"></path>
+                </svg>
+
+
+                <span class="word">on</span>
+                <!-- Variable: index -->
+
+
+                <svg class="snippet--ticker-shape" width="23" height="18" viewBox="0 0 23 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.662109 17.3626V6.21266L6.23707 0.637695L15.9933 6.21266L22.962 0.637695V11.7876L15.9933 17.3626L6.23707 11.7876L0.662109 17.3626Z"
+                        fill="white"></path>
+                </svg>
+
+            </div>
+        </div>
+    </footer>
+
+    <button class="floating-btn" id="messageBtn">
+        <span class="message-icon">💬</span>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+    <script>
+$('.owl-carousel').owlCarousel({
+    stagePadding: 100,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+    </script>
+</body>
+
+</html>
