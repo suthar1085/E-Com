@@ -88,7 +88,7 @@ nav select {
 }
 
 .banner .backg {
-  background: url(/img/image.jpg) center no-repeat;
+  background: url(img/image.jpg) center no-repeat;
   background-size: cover;
   height: 650px;
   border: 20px solid black;
